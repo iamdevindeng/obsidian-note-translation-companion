@@ -4,14 +4,6 @@
 
 ![Obsidian side-by-side translation demo](images/obsidian-side-by-side-demo.svg)
 
-<p align="center">
-  <a href="https://github.com/iamdevindeng/obsidian-note-translation-companion/releases">
-    <img src="https://img.shields.io/github/v/release/iamdevindeng/obsidian-note-translation-companion?include_prereleases" alt="release">
-  </a>
-  <img src="https://img.shields.io/badge/obsidian-%3E%3D0.15.0-blue" alt="obsidian">
-  <img src="https://img.shields.io/badge/license-MIT-green" alt="license">
-</p>
-
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 - Read English notes with a Chinese companion pane in Obsidian.
