@@ -1,8 +1,8 @@
-[English](README.md) | [简体中文](README.zh-CN.md)
-
 # Note Translation Companion
 
-> Generate a Chinese companion translation for English Obsidian notes, preserve Markdown structure, and reuse cached translations when nothing changed.
+> Generate a Simplified Chinese companion note for an English Obsidian note, open it beside the source, and keep the original Markdown untouched.
+
+![Obsidian side-by-side translation demo](images/obsidian-side-by-side-demo.svg)
 
 <p align="center">
   <a href="https://github.com/iamdevindeng/obsidian-note-translation-companion/releases">
@@ -12,34 +12,12 @@
   <img src="https://img.shields.io/badge/license-MIT-green" alt="license">
 </p>
 
-## What It Does
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-Note Translation Companion is an Obsidian plugin for side-by-side bilingual reading.
-
-When you are reading an English Markdown note, run one command and the plugin creates a Simplified Chinese companion note, opens it in the right pane, and keeps the original note untouched.
-
-- No copy-paste translation workflow.
-- Markdown structure stays intact, including code, math, links, tags, and Obsidian properties.
-- Cached translations are reused when the source note and request behavior have not changed.
-- OpenAI-compatible providers are supported, including DeepSeek, OpenAI, OpenRouter, Qwen-compatible endpoints, and custom compatible APIs.
-
-## Why I Built This
-
-I built this from my own Obsidian reading workflow: I wanted to read English notes with a clean Chinese companion pane without breaking the original Markdown or paying for repeated API calls.
-
-This is also one public artifact in my AI-native builder transition: turning a private workflow pain into a small, maintained, reusable tool.
-
-## Features
-
-| Feature | What it does |
-| --- | --- |
-| One-command translation | Run `Open Chinese Translation In New Pane` from the command palette. |
-| Automatic language detection | Chinese-dominant notes are skipped to avoid wasted API calls. |
-| Smart cache | SHA-256 source hashing reuses unchanged translations. |
-| Force refresh | Run `Refresh Translation For Current Note` to regenerate on demand. |
-| Markdown protection | Preserves frontmatter, code, math, links, wiki links, tags, and property keys. |
-| Custom provider setup | Use any OpenAI-compatible API with custom model, headers, and request body fields. |
-| Timeout handling | Requests stop after 60 seconds with a clear error message. |
+- Read English notes with a Chinese companion pane in Obsidian.
+- Preserve frontmatter, code, math, links, tags, wiki links, and property keys.
+- Reuse cached translations when the source note and provider settings have not changed.
+- Use DeepSeek, OpenAI, OpenRouter, Qwen-compatible endpoints, or another OpenAI-compatible provider.
 
 ## Quick Start
 
@@ -64,26 +42,62 @@ If you use [BRAT](https://github.com/TfTHacker/obsidian42-brat), add this reposi
 https://github.com/iamdevindeng/obsidian-note-translation-companion
 ```
 
-### Community Plugin Status
+### Configure A Provider
 
-The plugin is not yet listed in the Obsidian community plugin browser. After listing, you will be able to install it directly by searching for "Note Translation Companion" inside Obsidian.
-
-## Setup
-
-Open **Settings -> Note Translation Companion** and configure your provider:
+Open **Settings -> Note Translation Companion** and configure an OpenAI-compatible provider:
 
 | Setting | Description | Example |
 | --- | --- | --- |
 | API Base URL | Provider endpoint | `https://api.deepseek.com/v1` |
-| API Key | Your provider API key | `sk-...` |
+| API Key | Your provider API key | `provider-api-key` |
 | Model | Model name | `deepseek-chat` |
 | Temperature | Translation randomness | `0.3` |
-| Extra Headers (JSON) | Optional HTTP headers | `{"HTTP-Referer":"https://example.com","X-Title":"My Vault"}` |
+| Extra Headers (JSON) | Optional HTTP headers | `{"HTTP-Referer":"https://example.com","X-Title":"Note Translation Companion"}` |
 | Extra Body (JSON) | Optional request body fields | `{"thinking":{"type":"disabled"}}` |
 
 `Extra Headers` is only for HTTP headers, such as OpenRouter attribution headers. `Extra Body` is merged into the `/chat/completions` JSON body for provider-specific options such as DeepSeek thinking mode, `reasoning_effort`, or provider routing.
 
-### Provider Examples
+## Why
+
+Note Translation Companion is for people who read English Markdown notes in Obsidian but think, annotate, or review more comfortably with a Chinese companion pane.
+
+The plugin keeps the source note as the source of truth. It creates a separate translation file, opens it to the side, and uses a cache fingerprint so unchanged notes do not repeatedly call the provider.
+
+Maintainer note: I built this from my own Obsidian reading workflow while making small knowledge tools that fit into plain Markdown vaults.
+
+## Features
+
+| Feature | What it does |
+| --- | --- |
+| One-command translation | Run `Open Chinese Translation In New Pane` from the command palette. |
+| Automatic language detection | Chinese-dominant notes are skipped to avoid wasted API calls. |
+| Smart cache | SHA-256 source hashing reuses unchanged translations. |
+| Force refresh | Run `Refresh Translation For Current Note` to regenerate on demand. |
+| Markdown protection | Preserves frontmatter, code, math, links, wiki links, tags, and property keys. |
+| Custom provider setup | Use any OpenAI-compatible API with custom model, headers, and request body fields. |
+| Timeout handling | Requests stop after 60 seconds with a clear error message. |
+
+## What Changes In Your Vault?
+
+The original note is never overwritten. The plugin writes a companion translation under `_translations/` using the source note's relative path.
+
+```text
+source:      notes/research/agent-workflows.md
+translation: _translations/notes/research/agent-workflows.zh-Hans.md
+```
+
+Translation files include plugin-owned cache metadata in a hidden terminal HTML comment. The visible Obsidian Properties area stays reserved for the note's own metadata.
+
+## Usage
+
+1. Open any English Markdown note in Obsidian.
+2. Press `Cmd/Ctrl+P` to open the command palette.
+3. Run **Open Chinese Translation In New Pane**.
+4. The Chinese companion note opens in the right pane.
+5. Run the command again later. If the source note has not changed, the cached translation opens immediately.
+6. Run **Refresh Translation For Current Note** when you want to force a new translation.
+
+## Provider Examples
 
 <details>
 <summary><b>DeepSeek</b></summary>
@@ -128,28 +142,6 @@ When DeepSeek thinking mode is enabled, the provider may ignore `temperature`. T
 
 </details>
 
-## Usage
-
-1. Open any English Markdown note in Obsidian.
-2. Press `Cmd/Ctrl+P` to open the command palette.
-3. Run **Open Chinese Translation In New Pane**.
-4. The Chinese companion note opens in the right pane.
-5. Run the command again later. If the source note has not changed, the cached translation opens immediately.
-6. Run **Refresh Translation For Current Note** when you want to force a new translation.
-
-Translation files are stored here:
-
-```text
-_translations/<source-relative-path>.zh-Hans.md
-```
-
-Example:
-
-```text
-source:      notes/ai/agent-design.md
-translation: _translations/notes/ai/agent-design.zh-Hans.md
-```
-
 ## How It Works
 
 ```text
@@ -186,23 +178,20 @@ The cache is invalidated when any of these inputs change:
 - prompt version
 - target language
 
-The plugin preserves these Markdown structures during translation:
+## Known Limits
 
-- YAML frontmatter / Obsidian Properties
-- fenced code blocks and inline code
-- inline and display math
-- Markdown links and wiki links
-- tags
-- Obsidian property keys
-
-Plugin-owned cache metadata is stored in a hidden terminal HTML comment so the visible Obsidian Properties area remains reserved for the source note's own metadata.
+- The current version focuses on English-to-Simplified-Chinese companion notes only.
+- The plugin is not yet listed in the Obsidian community plugin directory.
+- Translation quality depends on the provider and model you configure.
+- Large notes may be slower or cost more because they require larger API requests.
+- API requests go only from your local Obsidian app to the provider you configure; this project does not run a translation server.
 
 ## Troubleshooting
 
 <details>
 <summary>Translation is slow.</summary>
 
-Translation speed depends mostly on your API provider. DeepSeek and other providers may respond slowly during peak hours. Local work such as reading files, detecting language, and hashing content is lightweight.
+Translation speed depends mostly on your API provider. Local work such as reading files, detecting language, and hashing content is lightweight.
 
 Try a faster provider, a smaller model, or a more stable network connection.
 
@@ -221,13 +210,6 @@ The cache expires when the source note, source path, provider, model, temperatur
 This is expected. If Chinese text is more than the language-detection threshold, the plugin shows a notice and skips translation.
 
 If the result looks wrong, the note may contain a high ratio of code blocks, English terms, or mixed-language content. Use refresh after adjusting provider settings.
-
-</details>
-
-<details>
-<summary>Can it translate into other languages?</summary>
-
-Not yet. The current version focuses on English-to-Simplified-Chinese companion notes. Multi-language support is a future direction.
 
 </details>
 
@@ -273,7 +255,7 @@ For now, support happens through GitHub Issues and Discussions.
 
 ## Maintainer
 
-Built and maintained by [Devin Deng](https://github.com/iamdevindeng), an AI-native builder working on AI workflow, developer tools, and knowledge tooling.
+Built and maintained by [Devin Deng](https://github.com/iamdevindeng). I use Obsidian heavily for reading and knowledge work, and this plugin is part of a small set of Markdown-first tools I maintain for that workflow.
 
 - GitHub: [@iamdevindeng](https://github.com/iamdevindeng)
 - X: [@iamdevindeng](https://x.com/iamdevindeng)

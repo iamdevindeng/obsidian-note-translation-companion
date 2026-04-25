@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Obsidian side-by-side translation demo</title>
+  <desc id="desc">A mock Obsidian window with an English source note on the left and a Simplified Chinese companion note on the right.</desc>
+  <defs>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f4fb"/>
+      <stop offset="1" stop-color="#ebe8f5"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#2b2438" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#f4f1ea"/>
+  <rect x="58" y="46" width="1164" height="628" rx="18" fill="#fbfaf7" filter="url(#shadow)"/>
+  <rect x="58" y="46" width="1164" height="58" rx="18" fill="url(#chrome)"/>
+  <rect x="58" y="86" width="1164" height="18" fill="#ebe8f5"/>
+  <circle cx="88" cy="75" r="7" fill="#f46d6d"/>
+  <circle cx="112" cy="75" r="7" fill="#f7c65a"/>
+  <circle cx="136" cy="75" r="7" fill="#68bf7b"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" fill="#453d52">Note Translation Companion</text>
+
+  <rect x="78" y="122" width="208" height="520" rx="10" fill="#f2efe8"/>
+  <text x="104" y="158" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#403846">Vault</text>
+  <rect x="98" y="184" width="158" height="30" rx="6" fill="#e5e0d7"/>
+  <text x="116" y="204" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#4d4653">notes</text>
+  <text x="116" y="238" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#6f6675">research</text>
+  <text x="132" y="270" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#403846">agent-workflows.md</text>
+  <rect x="98" y="302" width="166" height="34" rx="6" fill="#ded7ee"/>
+  <text x="116" y="324" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#403846">_translations</text>
+  <text x="116" y="356" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#6f6675">notes/research/...</text>
+  <text x="116" y="386" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#6f6675">agent-workflows.zh-Hans.md</text>
+
+  <rect x="312" y="122" width="426" height="520" rx="10" fill="#ffffff" stroke="#ded9d0"/>
+  <rect x="312" y="122" width="426" height="45" rx="10" fill="#f8f6f1"/>
+  <text x="336" y="150" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#6c6372">notes/research/agent-workflows.md</text>
+  <text x="336" y="204" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="750" fill="#2f2938">Agent Workflow Notes</text>
+  <text x="336" y="246" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" fill="#4f4658">A clean workflow keeps source material readable</text>
+  <text x="336" y="276" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" fill="#4f4658">while giving each reader the context they need.</text>
+  <rect x="336" y="318" width="356" height="1" fill="#e6e0d8"/>
+  <text x="336" y="356" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#4f4658">- Preserve Markdown links like [[Tooling]].</text>
+  <text x="336" y="388" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#4f4658">- Keep code blocks and formulas unchanged.</text>
+  <text x="336" y="420" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#4f4658">- Reuse cached translations when content is stable.</text>
+  <rect x="336" y="466" width="288" height="82" rx="8" fill="#f6f4ef" stroke="#e2dcd2"/>
+  <text x="358" y="496" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#594f61">const note = "source";</text>
+  <text x="358" y="526" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#594f61">translate(note);</text>
+
+  <rect x="758" y="122" width="426" height="520" rx="10" fill="#ffffff" stroke="#ded9d0"/>
+  <rect x="758" y="122" width="426" height="45" rx="10" fill="#f8f6f1"/>
+  <text x="782" y="150" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#6c6372">_translations/notes/research/agent-workflows.zh-Hans.md</text>
+  <text x="782" y="204" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="750" fill="#2f2938">Agent 工作流笔记</text>
+  <text x="782" y="246" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" fill="#4f4658">清晰的工作流可以保留原始材料的可读性，</text>
+  <text x="782" y="276" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" fill="#4f4658">同时给读者提供需要的中文上下文。</text>
+  <rect x="782" y="318" width="356" height="1" fill="#e6e0d8"/>
+  <text x="782" y="356" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#4f4658">- 保留 [[Tooling]] 这样的 Markdown 链接。</text>
+  <text x="782" y="388" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#4f4658">- 代码块和公式保持不变。</text>
+  <text x="782" y="420" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" fill="#4f4658">- 内容稳定时直接复用缓存翻译。</text>
+  <rect x="782" y="466" width="288" height="82" rx="8" fill="#f6f4ef" stroke="#e2dcd2"/>
+  <text x="804" y="496" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#594f61">const note = "source";</text>
+  <text x="804" y="526" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#594f61">translate(note);</text>
+
+  <rect x="480" y="590" width="512" height="36" rx="18" fill="#6b4bb3"/>
+  <text x="736" y="613" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#ffffff">Command: Open Chinese Translation In New Pane</text>
+</svg>
