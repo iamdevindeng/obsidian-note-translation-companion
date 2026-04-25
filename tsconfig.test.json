@@ -1,0 +1,22 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2020",
+    "outDir": ".tmp-tests",
+    "rootDir": ".",
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "noEmit": false
+  },
+  "include": [
+    "src/language-detection.ts",
+    "src/markdown-protector.ts",
+    "src/markdown-structure.ts",
+    "src/provider-request.ts",
+    "src/translation-document.ts",
+    "src/translation-paths.ts",
+    "src/single-flight.ts",
+    "tests/**/*.test.ts"
+  ]
+}

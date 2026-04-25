@@ -1,0 +1,26 @@
+{
+  "name": "obsidian-note-translation-companion",
+  "version": "1.0.0",
+  "description": "Generate Chinese translation companion notes for English Obsidian notes",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "test": "tsc -p tsconfig.test.json && node --test .tmp-tests/tests/*.test.js"
+  },
+  "keywords": ["obsidian", "plugin", "translation"],
+  "author": "Devin Deng",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamdevindeng/obsidian-note-translation-companion.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.20.0",
+    "obsidian": "latest",
+    "tslib": "^2.6.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "note-translation-companion",
+  "name": "Note Translation Companion",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Generate Chinese translation companion notes for English notes with OpenAI-compatible APIs",
+  "author": "Devin Deng",
+  "authorUrl": "https://github.com/iamdevindeng",
+  "fundingUrl": "",
+  "isDesktopOnly": false
+}
