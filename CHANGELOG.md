@@ -6,6 +6,7 @@
 
 - Refreshed the English and Chinese README structure and added a side-by-side demo image.
 - Recorded the `v1.0.0` clean-vault smoke test, GitHub Release verification, and public repository publication in repo-side release docs.
+- Added maintainer release checklist and manual test vault docs with sanitized Markdown fixture notes.
 
 ## 1.0.0 (2026-04-22)
 

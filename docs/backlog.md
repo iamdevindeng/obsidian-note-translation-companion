@@ -34,8 +34,8 @@ Use this file for execution-level work. Sync any private planning notes separate
 | --- | --- | --- | --- | --- | --- |
 | WF-001 | done | workflow | Add repo-side PRD-aftercare docs | 2026-04-24 vault sync discussion | Backlog, iteration note, ADR, and changelog structure added. |
 | PROV-001 | done | feature | Add provider request body extensibility | DeepSeek thinking mode discussion | Added Milestone 6, `extraBody`, and request behavior cache validation. |
-| DX-001 | todo | devex | Add a quick release checklist command or doc section | development-rhythm | Keep lightweight unless repetition proves a script is needed. |
-| QA-001 | todo | testing | Build a small manual test vault fixture set | PRD acceptance criteria | Keep fixtures out of git if they contain private notes. |
+| DX-001 | done | devex | Add a quick release checklist command or doc section | development-rhythm | Added a lightweight maintainer release checklist doc; automation remains deferred until repetition proves a script is needed. |
+| QA-001 | done | testing | Build a small manual test vault fixture set | PRD acceptance criteria | Added sanitized manual-test notes and a local test vault guide; full vaults, plugin data, API keys, and generated translations stay out of git. |
 
 ## Intake Rules
 

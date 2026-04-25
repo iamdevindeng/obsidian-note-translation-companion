@@ -226,6 +226,8 @@ Useful repo docs:
 - [PRD summary](docs/prd-summary.md)
 - [Backlog](docs/backlog.md)
 - [Development rhythm](docs/development-rhythm.md)
+- [Maintainer release checklist](docs/maintainer-release-checklist.md)
+- [Manual test vault](docs/manual-test-vault.md)
 - [Changelog](CHANGELOG.md)
 - [Agent instructions](AGENTS.md)
 
@@ -235,7 +237,7 @@ The implementation is intentionally lightweight: TypeScript, Obsidian Plugin API
 
 - Submit to the Obsidian community plugin directory.
 - Add optional commands for opening the source note from a translation and managing translation cache files.
-- Improve manual release and smoke-test documentation after the first public release.
+- Consider automating repeated release and smoke-test checks after the manual workflow stabilizes.
 - Explore multi-language companion notes after the English-to-Chinese workflow is stable.
 
 ## Support
