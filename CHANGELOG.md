@@ -2,7 +2,9 @@
 
 ## [Unreleased]
 
-- No unreleased changes yet.
+### Documentation
+
+- Recorded the `v1.0.0` clean-vault smoke test, GitHub Release verification, and public repository publication in repo-side release docs.
 
 ## 1.0.0 (2026-04-22)
 

@@ -22,10 +22,11 @@ Use this file for execution-level work. Sync any private planning notes separate
 | --- | --- | --- | --- | --- |
 | REL-001 | done | release | Initialize git history and create first reviewable commit | Git initialized on `main`; initial commit created for the completed local implementation and workflow docs. |
 | REL-005 | done | release | Align public identity references for release | Updated README release/BRAT/issue/discussion links, `manifest.json` author URL, and `package.json` author to `Devin Deng` / `iamdevindeng`. `npm run build` and `npm test` passed after the change. |
-| REL-002 | done | release | Create GitHub repo under `iamdevindeng` | Public repo created at `iamdevindeng/obsidian-note-translation-companion`; local `origin` configured. |
-| REL-003 | todo | release | Verify README installation steps from a clean vault | Confirm manual install instructions match release assets. |
-| REL-004 | todo | release | Create first GitHub Release | Attach `main.js`, `manifest.json`, and `styles.css` if present. |
+| REL-002 | done | release | Create GitHub repo under `iamdevindeng` | Public repo available at `iamdevindeng/obsidian-note-translation-companion`; local `origin` configured. |
+| REL-003 | done | release | Verify README installation steps from a clean vault | Verified manual install from release-layout files in `/tmp/ntc-release-smoke-vault`: Obsidian detected `Note Translation Companion` `1.0.0`, enabled it, opened the smoke note, and listed the main command in the command palette. |
+| REL-004 | done | release | Create first GitHub Release | Created `v1.0.0` with exactly `main.js`, `manifest.json`, and `styles.css`; verified the public release and badge resolve to `v1.0.0`. |
 | REL-006 | done | release | Sanitize public repository before first push | Removed private workspace paths from public docs, added local secret/tool ignores, expanded hygiene tests, and rewrote local history before first push. |
+| REL-007 | done | release | Publish repository publicly | Made `iamdevindeng/obsidian-note-translation-companion` public after build, test, secret scan, clean-vault smoke test, and private release verification passed. |
 
 ## Product Iteration Backlog
 
