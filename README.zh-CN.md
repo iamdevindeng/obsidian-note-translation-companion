@@ -2,6 +2,8 @@
 
 > 为英文 Obsidian 笔记生成一份简体中文对照笔记，在右侧并排打开，并且不改动原始 Markdown。
 
+![GitHub Release](https://img.shields.io/github/v/release/iamdevindeng/obsidian-note-translation-companion) ![Obsidian Version](https://img.shields.io/badge/Obsidian-%3E%3D0.15.0-7C3AED) ![License](https://img.shields.io/github/license/iamdevindeng/obsidian-note-translation-companion)
+
 ![Obsidian 双栏翻译预览](images/obsidian-side-by-side-demo.svg)
 
 [English](README.md) | [简体中文](README.zh-CN.md)

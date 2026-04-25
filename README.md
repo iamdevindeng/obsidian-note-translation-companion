@@ -2,6 +2,8 @@
 
 > Generate a Simplified Chinese companion note for an English Obsidian note, open it beside the source, and keep the original Markdown untouched.
 
+![GitHub Release](https://img.shields.io/github/v/release/iamdevindeng/obsidian-note-translation-companion) ![Obsidian Version](https://img.shields.io/badge/Obsidian-%3E%3D0.15.0-7C3AED) ![License](https://img.shields.io/github/license/iamdevindeng/obsidian-note-translation-companion)
+
 ![Obsidian side-by-side translation demo](images/obsidian-side-by-side-demo.svg)
 
 [English](README.md) | [简体中文](README.zh-CN.md)
